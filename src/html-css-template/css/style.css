@@ -1,20 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
 :root {
-  --cyan: #5ce1e6;
+  --pink-primary: #e30962;
+  --pink-seconday: #ff3a6f;
   --blue: #38b6ff;
-  --pink: #d88b92;
-  --off-white: #f2f2f2;
+  --off-white: #f7f7f7;
   --pure-black: #000000;
   --pure-black-transparent: #000000b2;
   --dark-color: #333333;
   --btn-green: #27ae60;
-  --font-defaut: "Roboto Mono", monospace;
+  --font-defaut: "Roboto", monospace;
   --font-dark-color: #383838;
   --purple: #5662b7;
   --light-color: #f2f2f2;
-  --light-color-2: #8f8f8f;
+  --light-color-2: #E2E2E2;
+  --dashed-transparent: #ffffff6b;
 }
 
 .container {
+  max-width: 1920px;
   width: 80%;
   margin: auto;
 
@@ -22,9 +26,11 @@
 }
 
 body {
-  background-color: var(--dark-color);
+  background-color: var(--light-color-2);
   font-family: var(--font-defaut);
 }
+
+
 
 .btn {
   display: flex;
@@ -32,8 +38,8 @@ body {
   text-align: center;
   height: 40px;
   padding: 0 50px;
-  color: var(--pure-black);
-  background-color: var(--cyan);
+  color: var(--light-color);
+  background-color: var(--pink-seconday);
   border: none;
   border-radius: 5px;
   /* or 114% */
@@ -59,19 +65,35 @@ body {
 nav {
   height: 80px;
   width: 100%;
-  background-color: var(--pure-black);
+  background-color: var(--light-color);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-.avatar {
-  float: right;
-}
 
-.logo,
-.avatar {
-  margin-top: 15px;
-  height: 50px;
+nav .container h1 {
+
+  color: var(--pink-primary);
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: var(--font-defaut);
+
 }
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+}
+
+
+
+
+
+
 
 /* Index */
 
@@ -94,23 +116,23 @@ nav {
 }
 
 .info-index .display {
-  font-family: Roboto Mono;
+  font-family: var(--font-defaut);
   margin-top: 150px;
   font-style: normal;
   font-weight: bold;
   font-size: 64px;
   line-height: 84px;
-  color: #f2f2f2;
+  color: var(--dark-color);
 }
 
 .subtitle {
-  font-family: Roboto Mono;
+  font-family: var(--font-defaut);
   font-style: normal;
   font-weight: normal;
-  font-size: 24p x;
+  font-size: 24px;
   line-height: 32px;
   margin: 50px 0;
-  color: #5ce1e6;
+  color: var(--pink-primary);
 }
 
 .info-index h3 {
@@ -123,7 +145,10 @@ nav {
 
 .not-found h3 {
   font-size: 60px;
+
 }
+
+
 
 .box-text-index {
   width: 50%;
@@ -155,6 +180,7 @@ nav {
 .music-boxes.three-columns {
   grid-template-columns: repeat(3, 1fr);
 }
+
 .music-boxes.two-columns {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -166,22 +192,28 @@ nav {
 .card-music {
   background-image: url(../imagens/cover-pink.png);
   background-size: cover;
+
+  border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
   height: 200px;
   height: 432px;
   width: auto;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px 0px;
 }
 
 .info-music {
   background-color: var(--pure-black-transparent);
-  min-height: 160px;
+  min-height: 180px;
   width: 100%;
   align-self: flex-end;
   flex-wrap: wrap;
   padding: 15px;
+
 }
+
+
 
 .icons {
   padding: 15px;
@@ -209,7 +241,7 @@ nav {
 .music-box {
   width: 290px;
   margin: 5px;
-  font-family: sans-serif;
+  font-family: var(--font-defaut);
   display: inline-block;
 }
 
@@ -261,12 +293,13 @@ nav {
   width: 100px;
 }
 
-/* ADICIONAR MÚSICA */
+/* enable MÚSICA */
 
 .add-music {
   display: flex;
   width: 100%;
-  min-height: 750px;
+  min-height: 80vh;
+  transition: all 0.3s ease-in;
 }
 
 .add-music img {
@@ -274,6 +307,7 @@ nav {
     height: 50%; */
   margin-top: 150px;
 }
+
 /* .add-music img {
     width: 50%;
 } */
@@ -283,15 +317,6 @@ nav {
   width: 50%;
 }
 
-.formulario label,
-.formulario-erro label {
-  padding-bottom: 15px;
-}
-
-.formulario-erro {
-  min-height: 100vh;
-  overflow: hidden;
-}
 
 .img-lateral {
   width: 50%;
@@ -316,16 +341,33 @@ form input {
   border: solid --font-dark-color 1px;
   margin-bottom: 25px;
   font-family: var(--font-defaut);
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  outline: none;
+  transition: all 0.3s ease-in;
+  background-color: var(--off-white);
+
+}
+
+form input:focus,
+form input:hover {
+  background-color: #fff;
+
+  outline: none;
+  border-color: rgba(227, 47, 116, 0.616);
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+
 }
 
 form label {
   font-family: var(--font-defaut);
   margin: 15px 0;
+  color: var(--font-dark-color);
 }
 
 .add-music h1 {
   margin: 50px 0;
-  font-family: Roboto Mono;
+  font-family: var(--font-defaut);
   font-style: normal;
   font-weight: bold;
   font-size: 64px;
@@ -333,36 +375,64 @@ form label {
   display: flex;
   align-items: center;
   color: var(--off-white);
+  color: var(--dark-color);
+
+}
+
+.add-music h3 {
+  margin: 1rem 0;
+  font-family: var(--font-defaut);
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1rem;
+  align-items: center;
+  color: var(--pink-seconday);
+
 }
 
 .input-music-disabled {
-  background-color: #333333;
-  border: none;
-  color: #fff;
-  padding: 5px;
-  border: solid #333333 1px;
-  border-radius: 5px;
+  line-height: 16px;
+
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  transition: .3s ease;
 }
 
 .input-music-enable {
-  background-color: #333333;
-  color: #fff;
-  padding: 5px;
-  border: solid white 1px;
-  border-radius: 5px;
+  line-height: 16px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: .3s ease;
 }
+
+.input-music-enable:focus,
+.input-music-enable:hover {
+  outline: none;
+  border-color: rgba(227, 47, 116, 0.616);
+  background-color: var(--off-white);
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+
 
 .card-title {
   width: 35%;
 }
 
 .btn-salvar-enable {
+  margin: 10px 0;
   float: right;
-  background-color: green;
+  background-color: var(--pink-seconday);
   color: #fff;
   border: none;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.5s;
   cursor: pointer;
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../html-css-template/imagens/logo-verde.png";
 import avatar from "../html-css-template/imagens/avatar.png";
 import { useNavigate } from "react-router-dom";
 
@@ -8,14 +7,13 @@ function Menu() {
 
   return (
     <>
-      <nav>
+      <nav className="navigate">
         <div className="container">
-          <img
-            src={logo}
-            alt="Logo"
-            className="logo"
+
+
+          <h1
             onClick={() => navigate("/")}
-          />
+          >MUSIC BOX</h1>
           <img src={avatar} alt="Avatar" className="avatar" />
         </div>
       </nav>

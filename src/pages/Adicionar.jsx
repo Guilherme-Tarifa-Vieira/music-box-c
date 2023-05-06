@@ -33,35 +33,33 @@ function Adicionar() {
       <div className="container">
         <div className="add-music">
           <div className="formulario">
-            <h1>adicionar</h1>
+            <div>
+              <h1>Adicionar</h1>
+              <h3>Cadastre uma nova música á sua lista de favoritos.</h3>
+              <br />
+            </div>
 
             <br />
 
             <form onSubmit={cadastrar}>
               <label>
-                Música: <br />
-                <input name="nome" type="text" />
+                <input name="nome" type="text" placeholder="Digite o nome da música" />
               </label>
               <br />
               <label>
-                Artista: <br />
-                <input name="art" type="text" />
+                <input name="art" type="text" placeholder="Digite o nome do artista" />
               </label>
               <br />
               <label>
-                Genêro: <br />
-                <input name="gen" type="text" />
+                <input name="gen" type="text" placeholder="Qual genêro essa música faz parte?" />
               </label>
               <br />
               <label>
-                Ano de Lançamento: <br />
-                <input name="ano" type="text" />
+                <input name="ano" type="text" placeholder="Ano do lançamento" />
               </label>
               <br />
               <label>
-                {" "}
-                Imagem (url): <br />
-                <input name="img" type="text" />
+                <input name="img" type="text" placeholder="Caminho da imagem URL(web)" />
               </label>
               <br />
               <button type="submit" className="btn">

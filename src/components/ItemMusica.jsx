@@ -48,7 +48,7 @@ function ItemMusica(props) {
         </div>
         <div className="info-music">
           <p>
-            <strong className="card-title">música: </strong>
+            <label className="card-title">música: </label>
             <input
               disabled={!edit}
               className={edit ? "input-music-enable" : "input-music-disabled"}
@@ -58,7 +58,7 @@ function ItemMusica(props) {
             />
           </p>
           <p>
-            <strong className="card-title">artista: </strong>
+            <label className="card-title">artista: </label>
             <input
               disabled={!edit}
               className={edit ? "input-music-enable" : "input-music-disabled"}
@@ -68,7 +68,7 @@ function ItemMusica(props) {
             />
           </p>
           <p>
-            <strong className="card-title">categoria: </strong>
+            <label className="card-title">categoria: </label>
             <input
               disabled={!edit}
               className={edit ? "input-music-enable" : "input-music-disabled"}
@@ -78,7 +78,7 @@ function ItemMusica(props) {
             />
           </p>
           <p>
-            <strong className="card-title">ano: </strong>
+            <label className="card-title">ano: </label>
             <input
               disabled={!edit}
               className={edit ? "input-music-enable" : "input-music-disabled"}

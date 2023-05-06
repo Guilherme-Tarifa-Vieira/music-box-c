@@ -22,12 +22,12 @@ function Musicas() {
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth >= 1044) {
-        setColunas(3);
-      } else if (window.innerWidth >= 760) {
+      if (window.innerWidth >= 760 && window.innerWidth <= 1044) {
         setColunas(2);
-      } else {
+      } else if (window.innerWidth <= 760) {
         setColunas(1);
+      } else {
+        setColunas(3);
       }
     }
 
@@ -60,15 +60,14 @@ function Musicas() {
 
       <div className="container">
         <div
-          className={`music-boxes ${
-            colunas === 2
-              ? "two-columns"
-              : colunas === 3
+          className={`music-boxes ${colunas === 2
+            ? "two-columns"
+            : colunas === 3
               ? "three-columns"
               : colunas === 1
-              ? "one-columns"
-              : ""
-          }`}
+                ? "one-columns"
+                : ""
+            }`}
         >
           {musicas.map((musica) => (
             <React.Fragment key={musica.id}>
