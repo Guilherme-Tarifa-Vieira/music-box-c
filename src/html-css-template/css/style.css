@@ -95,6 +95,8 @@ nav .container {
 .index-content {
   display: flex;
   min-height: 700px;
+  margin: 0 auto 5em auto;
+
 }
 
 .info-index {
@@ -119,6 +121,7 @@ nav .container {
 
   line-height: 84px;
   color: var(--dark-color);
+
 }
 
 .subtitle {
@@ -376,14 +379,17 @@ nav .container {
 .add-music {
   display: flex;
   width: 100%;
-  min-height: 80vh;
+  margin: 0 auto 4em auto;
+
   transition: all 0.3s ease-in;
+  overflow-x: hidden;
 }
 
 .add-music img {
   /* width: 50%;
     height: 50%; */
   margin-top: 150px;
+  width: 100%;
 }
 
 /* .add-music img {
@@ -545,6 +551,19 @@ form label {
     opacity: 0.3;
     z-index: -1;
   }
+
+
+  .container .add-music .formulario {
+    width: 100%;
+  }
+
+
+
+
+  .add-music img {
+    display: none;
+  }
+
 
 
 }
