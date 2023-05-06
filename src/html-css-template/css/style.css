@@ -87,6 +87,11 @@ nav .container {
 
 /* Index */
 
+.display.display-min {
+  min-width: 300px;
+  letter-spacing: 2px;
+}
+
 .index-content {
   display: flex;
   min-height: 700px;
@@ -152,6 +157,10 @@ nav .container {
   -webkit-font-smoothing: antialiased !important;
 }
 
+.my-custom-blockquote.custom-min::after {
+  transform: translate(-108%, -50%) rotate(-16deg);
+}
+
 .not-found h3 {
   font-size: 60px;
 }
@@ -161,8 +170,14 @@ nav .container {
 }
 
 .index-img {
+  display: flex;
   width: 50%;
   margin: auto;
+}
+
+.index-img.img-false {
+  opacity: 0;
+  display: none;
 }
 
 .avatar {
