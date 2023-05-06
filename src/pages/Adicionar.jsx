@@ -43,15 +43,27 @@ function Adicionar() {
 
             <form onSubmit={cadastrar}>
               <label>
-                <input name="nome" type="text" placeholder="Digite o nome da música" />
+                <input
+                  name="nome"
+                  type="text"
+                  placeholder="Digite o nome da música"
+                />
               </label>
               <br />
               <label>
-                <input name="art" type="text" placeholder="Digite o nome do artista" />
+                <input
+                  name="art"
+                  type="text"
+                  placeholder="Digite o nome do artista"
+                />
               </label>
               <br />
               <label>
-                <input name="gen" type="text" placeholder="Qual genêro essa música faz parte?" />
+                <input
+                  name="gen"
+                  type="text"
+                  placeholder="Qual genêro essa música faz parte?"
+                />
               </label>
               <br />
               <label>
@@ -59,7 +71,11 @@ function Adicionar() {
               </label>
               <br />
               <label>
-                <input name="img" type="text" placeholder="Caminho da imagem URL(web)" />
+                <input
+                  name="img"
+                  type="text"
+                  placeholder="Caminho da imagem URL(web)"
+                />
               </label>
               <br />
               <button type="submit" className="btn">
