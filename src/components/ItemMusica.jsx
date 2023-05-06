@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import capaPadrao from "../html-css-template/imagens/capa.png";
 import editIcon from "../html-css-template/imagens/edit-icon.png";
 import deleteIcon from "../html-css-template/imagens/delete-icon.png";
+import { AiFillEdit, AiFillSave, AiFillDelete } from "react-icons/ai";
 
 import api from "../api";
 
@@ -39,12 +40,20 @@ function ItemMusica(props) {
     <>
       <div className="card-music" style={estiloCard}>
         <div className="icons">
-          <img src={editIcon} alt="" onClick={() => setEdit(true)} />
+          <button onClick={() => setEdit(true)}>
+            <AiFillEdit size={24} />
+          </button>
+
+          <button onClick={() => props.deletar(props.id)}>
+            <AiFillDelete size={24} />
+          </button>
+
+          {/* <img src={editIcon} alt="" onClick={() => setEdit(true)} />
           <img
             src={deleteIcon}
             alt=""
             onClick={() => props.deletar(props.id)}
-          />
+          /> */}
         </div>
         <div className="info-music">
           <p>
@@ -91,7 +100,7 @@ function ItemMusica(props) {
             className={edit ? "btn-salvar-enable" : "btn-salvar-disabled"}
             onClick={atualizarMusica}
           >
-            Salvar
+            <AiFillSave size={24} />
           </button>
         </div>
       </div>
