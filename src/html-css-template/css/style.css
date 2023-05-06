@@ -115,7 +115,8 @@ nav .container {
   margin-top: 150px;
   font-style: normal;
   font-weight: bold;
-  font-size: 64px;
+  font-size: 3rem;
+
   line-height: 84px;
   color: var(--dark-color);
 }
@@ -202,6 +203,7 @@ nav .container {
   display: grid;
   grid-auto-rows: auto;
   grid-gap: 32px;
+
 }
 
 .music-boxes.three-columns {
@@ -259,13 +261,11 @@ nav .container {
   box-shadow: 21px -21px 42px var(--dashed-transparent),
     -21px 21px 42px var(--light-color-2);
   background: rgb(242, 242, 242);
-  background: linear-gradient(
-    188deg,
-    rgba(242, 242, 242, 1) 1%,
-    rgb(222, 219, 219) 7%,
-    rgb(179, 178, 178) 18%,
-    rgba(255, 255, 255, 0.06214985994397759) 100%
-  );
+  background: linear-gradient(188deg,
+      rgba(242, 242, 242, 1) 1%,
+      rgb(222, 219, 219) 7%,
+      rgb(179, 178, 178) 18%,
+      rgba(255, 255, 255, 0.06214985994397759) 100%);
 
   @-webkit-keyframes ani2 {
     from {
@@ -399,6 +399,12 @@ nav .container {
   width: 50%;
 }
 
+.img-lateral.img-min {
+
+  display: none;
+
+}
+
 form {
   width: 100%;
   font-family: var(--font-defaut);
@@ -512,14 +518,33 @@ form label {
   opacity: 0;
 }
 
-/* @media only screen and (min-width: 992px) {
-  .music-boxes.count {
-    column-count: 3;
-  }
-}
 
-@media only screen and (max-width: 732px) {
-  .music-boxes.count {
-    column-count: 2;
+
+@media only screen and (max-width: 900px) {
+
+  .info-index {
+    width: 100%;
   }
-} */
+
+  .info-index .display {
+    font-size: 2.5rem;
+    width: 80vw;
+    align-self: center;
+    margin-left: 10%;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+
+    width: 80vw;
+    align-self: center;
+
+  }
+
+  .index-img {
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+
+}

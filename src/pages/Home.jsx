@@ -20,6 +20,7 @@ function Home() {
 
     window.addEventListener("resize", handleResize);
 
+    handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, [image]);
 
@@ -33,11 +34,10 @@ function Home() {
                 className={`my-custom-blockquote ${!image ? "custom-min" : ""}`}
               >
                 <p className={`display ${!image ? "display-min" : ""}`}>
-                  A música certa para o seu mood
+                  Playlist Perfeita: Encontre a trilha sonora ideal para cada mood
                 </p>
                 <p className="subtitle">
-                  organize suas músicas preferidas por categorias e aproveite
-                  cada batida{" "}
+                  Organize suas músicas favoritas em diferentes categorias e encontre a trilha sonora perfeita para o seu humor. Deixe cada batida tocar no ritmo da sua vida{" "}
                 </p>
               </blockquote>
             </div>
